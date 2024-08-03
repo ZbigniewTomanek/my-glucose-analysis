@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "glucoseanalysis"
+version = "0.1.0"
+description = ""
+authors = ["ztomanek <zbigniew.tomanek@datawalk.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+jupyter = "^1.0.0"
+pandas = "^2.2.2"
+plotly = "^5.23.0"
+reportlab = "^4.2.2"
+deepl = "^1.18.0"
+python-dotenv = "^1.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

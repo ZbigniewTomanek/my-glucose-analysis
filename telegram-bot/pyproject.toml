@@ -1,0 +1,48 @@
+[tool.poetry]
+name = "telegram-bot"
+version = "0.1.0"
+description = ""
+authors = ["ztomanek <zbigniew.tomanek@datawalk.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+python-telegram-bot = "^21.3"
+loguru = "^0.7.2"
+python-dotenv = "^1.0.1"
+pydantic = "^2.7.3"
+fortune-python = "^1.1.1"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.2"
+flake8 = "^7.0.0"
+autoflake = "^2.3.1"
+isort = "^5.13.2"
+pre-commit = "^3.7.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 120
+combine_as_imports = true
